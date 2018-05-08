@@ -7,6 +7,7 @@ import com.lcc.concurrent.annoations.ThreadSafe;
 
 /**
  * google 不可变工具栏
+ *
  * @author: lcc
  * @Date: 2018-05-08
  **/
@@ -23,6 +24,7 @@ public class GooleImmutableUnits {
 
 
 	public static void main(String[] args) {
+		//	map2.put()
 		System.out.println(map2.get(3));
 	}
 }
