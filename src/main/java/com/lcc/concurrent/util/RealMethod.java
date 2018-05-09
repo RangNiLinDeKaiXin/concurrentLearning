@@ -1,4 +1,4 @@
-package com.lcc.concurrent.commonUnsafe.util;
+package com.lcc.concurrent.util;
 
 /**
  * @author: lcc

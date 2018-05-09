@@ -1,4 +1,4 @@
-package com.lcc.concurrent.commonUnsafe.util;
+package com.lcc.concurrent.util;
 
 import lombok.extern.slf4j.Slf4j;
 

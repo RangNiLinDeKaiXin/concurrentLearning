@@ -1,8 +1,8 @@
 package com.lcc.concurrent.commonUnsafe;
 
 import com.lcc.concurrent.annoations.NotThreadSafe;
-import com.lcc.concurrent.commonUnsafe.util.ExecutorsTemplate;
-import com.lcc.concurrent.commonUnsafe.util.RealMethod;
+import com.lcc.concurrent.util.ExecutorsTemplate;
+import com.lcc.concurrent.util.RealMethod;
 import lombok.extern.slf4j.Slf4j;
 
 /**
