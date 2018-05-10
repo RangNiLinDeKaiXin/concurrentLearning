@@ -25,9 +25,9 @@ public class CollectionsDeal implements RealMethod<Integer> {
 	public static void main(String[] args) throws Exception {
 		CollectionsDeal collectionsDeal = new CollectionsDeal();
 		ExecutorsTemplate executorsTemplate = new ExecutorsTemplate();
-		executorsTemplate.execute(map, collectionsDeal);
-		//executorsTemplate.execute(set, collectionsDeal);
-		//executorsTemplate.execute(list, collectionsDeal);
+		executorsTemplate.executeCollection(map, collectionsDeal);
+		//executorsTemplate.executeCollection(set, collectionsDeal);
+		//executorsTemplate.executeCollection(list, collectionsDeal);
 	}
 
 

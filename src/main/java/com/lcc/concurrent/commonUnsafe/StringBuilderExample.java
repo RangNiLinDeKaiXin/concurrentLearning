@@ -18,7 +18,7 @@ public class StringBuilderExample implements RealMethod<Integer> {
 	public static void main(String[] args) throws Exception {
 		StringBuilderExample stringBuilderExample = new StringBuilderExample();
 		ExecutorsTemplate executorsTemplate = new ExecutorsTemplate();
-		executorsTemplate.execute(stringBuilder, stringBuilderExample);
+		executorsTemplate.executeCollection(stringBuilder, stringBuilderExample);
 	}
 
 	@Override

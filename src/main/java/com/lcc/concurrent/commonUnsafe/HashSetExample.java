@@ -20,7 +20,7 @@ public class HashSetExample implements RealMethod<Integer> {
 	public static void main(String[] args) throws Exception {
 		HashSetExample h = new HashSetExample();
 		ExecutorsTemplate executorsTemplate = new ExecutorsTemplate();
-		executorsTemplate.execute(set, h);
+		executorsTemplate.executeCollection(set, h);
 	}
 
 	@Override

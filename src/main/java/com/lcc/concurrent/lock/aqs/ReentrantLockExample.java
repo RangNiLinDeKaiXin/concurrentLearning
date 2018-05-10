@@ -1,59 +1,60 @@
-package com.lcc.concurrent.util;
+package com.lcc.concurrent.lock.aqs;
 
+import com.lcc.concurrent.annoations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.Collection;
-import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * 线程执行模版
- *
  * @author: lcc
- * @Date: 2018-05-08
+ * @Date: 2018-05-09
  **/
 @Slf4j
-public class ExecutorsTemplate<T> {
+@ThreadSafe
+public class ReentrantLockExample {
+
 	// 请求总数
 	public static int clientTotal = 5000;
 
 	// 同时并发执行的线程数
 	public static int threadTotal = 200;
 
+	public static int count = 0;
 
-	public void executeCollection(T t, RealMethod realMethod) throws InterruptedException {
+	private final static Lock lock = new ReentrantLock();
+
+	public static void main(String[] args) throws Exception {
 		ExecutorService executorService = Executors.newCachedThreadPool();
 		final Semaphore semaphore = new Semaphore(threadTotal);
 		final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
 		for (int i = 0; i < clientTotal; i++) {
-			final int count = i;
 			executorService.execute(() -> {
 				try {
 					semaphore.acquire();
-					realMethod.update(count);
+					add();
 					semaphore.release();
 				} catch (Exception e) {
-
+					log.error("exception", e);
 				}
 				countDownLatch.countDown();
 			});
 		}
 		countDownLatch.await();
 		executorService.shutdown();
-		if (t instanceof Collection) {
-			Collection collection = (Collection) t;
-			log.debug("size:{}", collection.size());
-		} else if (t instanceof CharSequence) {
-			CharSequence charSequence = (CharSequence) t;
-			log.debug("size:{}", charSequence.length());
-		} else if (t instanceof Map) {
-			Map map = (Map) t;
-			log.debug("size:{}", map.size());
-		}
-
+		log.info("count:{}", count);
 	}
 
+	private static void add() {
+		lock.lock();
+		try {
+			count++;
+		} finally {
+			lock.unlock();
+		}
+	}
 }

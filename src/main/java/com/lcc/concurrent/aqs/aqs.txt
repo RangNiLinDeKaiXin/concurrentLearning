@@ -1,0 +1,3 @@
+AQS是用来构建锁或其他同步组件的基础框架，内部使用一个int成员变量表示同步状态，通过内置的FIFO队列来完成资源获取线程的排队工作，都是通过volatile修饰，保证了多线程之间的可见。
+博文：
+深入浅出java同步器AQS  https://www.jianshu.com/p/d8eeb31bee5c

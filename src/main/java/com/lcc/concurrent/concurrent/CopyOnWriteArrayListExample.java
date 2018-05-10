@@ -25,7 +25,7 @@ public class CopyOnWriteArrayListExample implements RealMethod<Integer> {
 	public static void main(String[] args) throws Exception {
 		CopyOnWriteArrayListExample copyOnWriteArrayListExample = new CopyOnWriteArrayListExample();
 		ExecutorsTemplate executorsTemplate = new ExecutorsTemplate();
-		executorsTemplate.execute(list, copyOnWriteArrayListExample);
+		executorsTemplate.executeCollection(list, copyOnWriteArrayListExample);
 	}
 
 

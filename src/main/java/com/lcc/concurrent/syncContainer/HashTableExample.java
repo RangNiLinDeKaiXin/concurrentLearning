@@ -26,7 +26,7 @@ public class HashTableExample implements RealMethod<Integer> {
 	public static void main(String[] args) throws Exception {
         HashTableExample hashTableExample = new HashTableExample();
         ExecutorsTemplate executorsTemplate = new ExecutorsTemplate();
-        executorsTemplate.execute(map, hashTableExample);
+        executorsTemplate.executeCollection(map, hashTableExample);
 
 	}
 

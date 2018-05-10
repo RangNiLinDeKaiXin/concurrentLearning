@@ -19,7 +19,7 @@ public class StringBufferExample implements RealMethod<Integer> {
 	public static void main(String[] args) throws Exception {
 		StringBufferExample stringBufferExample = new StringBufferExample();
 		ExecutorsTemplate executorsTemplate = new ExecutorsTemplate();
-		executorsTemplate.execute(stringBuffer, stringBufferExample);
+		executorsTemplate.executeCollection(stringBuffer, stringBufferExample);
 	}
 
 	@Override

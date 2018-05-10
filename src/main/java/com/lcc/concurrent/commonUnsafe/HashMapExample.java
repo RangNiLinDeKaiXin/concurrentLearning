@@ -22,7 +22,7 @@ public class HashMapExample implements RealMethod<Integer> {
 	public static void main(String[] args) throws Exception {
 		HashMapExample h = new HashMapExample();
 		ExecutorsTemplate executorsTemplate = new ExecutorsTemplate();
-		executorsTemplate.execute(map, h);
+		executorsTemplate.executeCollection(map, h);
 	}
 
 

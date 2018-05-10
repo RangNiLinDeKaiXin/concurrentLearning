@@ -22,7 +22,7 @@ public class ArrayListExample implements RealMethod<Integer> {
 	public static void main(String[] args) throws Exception {
 		ArrayListExample listExample = new ArrayListExample();
 		ExecutorsTemplate executorsTemplate = new ExecutorsTemplate();
-		executorsTemplate.execute(list, listExample);
+		executorsTemplate.executeCollection(list, listExample);
 	}
 
 

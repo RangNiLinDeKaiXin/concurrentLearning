@@ -25,7 +25,7 @@ public class ConcurrentHashMapExample implements RealMethod<Integer> {
 	public static void main(String[] args) throws Exception {
 		ConcurrentHashMapExample concurrentHashMapExample = new ConcurrentHashMapExample();
 		ExecutorsTemplate executorsTemplate = new ExecutorsTemplate();
-		executorsTemplate.execute(concurrentHashMap, concurrentHashMapExample);
+		executorsTemplate.executeCollection(concurrentHashMap, concurrentHashMapExample);
 	}
 
 
