@@ -7,6 +7,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.RecursiveTask;
 /**
  *  fork把大任务切割多个小任务并行执行，join合并小任务计算结果最后得出总计算结果
+ *  http://ifeve.com/talk-concurrency-forkjoin/
  * @author: lcc
  * @Date: 2018-05-09
  **/

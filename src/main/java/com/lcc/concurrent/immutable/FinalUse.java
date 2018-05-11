@@ -5,6 +5,7 @@ import com.lcc.concurrent.annoations.NotThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Map;
+import java.util.stream.IntStream;
 
 /**
  * @author: lcc
@@ -31,13 +32,17 @@ public class FinalUse {
 		map.put(1, 3); //虽然map被final修饰 但是 还是可以修改map 的值
 
 //		log.info("{}", map.get(1));
-
+		int[] nums ={1,2,3,4};
+		int a =IntStream.of(nums).sum();
+		System.out.println(a);
 	}
 
 	//修饰参数，基本数据类型时值不可变，引用类型时，引用不可变
 	private void test(final int a) {
 //        a = 1;
 	}
+
+
 }
 
 
